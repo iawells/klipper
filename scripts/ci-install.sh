@@ -22,7 +22,7 @@ echo -e "\n\n=============== Install system dependencies\n\n"
 if [ `id -u` == 0 ]; then
     sudo apt-get -y install gcc-avr avr-libc pv libmpfr-dev libgmp-dev \
          libmpc-dev texinfo libncurses5-dev bison flex python-virtualenv \
-         virtualenv python-dev tox libffi-dev build-essential \
+         virtualenv python-dev tox libffi-dev pv build-essential \
          libnewlib-arm-none-eabi gcc-arm-none-eabi binutils-arm-none-eabi
 fi
 
