@@ -18,23 +18,3 @@ jobs:
       run: ./scripts/ci-install.sh
 
 
-    - name: Validate python code with static analysis/unittest
-      run: ./scripts/ci-klippy-whitebox.sh
-
-    - name: Check whitespace conformance
-      run: ./scripts/ci-whitespace.sh 2>&1
-
-
-    - name: Build data dictionaries and ROMs
-      run: ./scripts/ci-build.sh 2>&1
-
-
-    - name: Test klippy using dicts and configs
-      run: ./scripts/ci-klippy-systest.sh
-
-
-    - name: Upload micro-controller data
-      uses: actions/upload-artifact@v2
-      with:
-        name: data-dict
-        path: ci_build/dict
